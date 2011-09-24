@@ -16,6 +16,7 @@
 @interface ILAlertViewController : NSObject <UIAlertViewDelegate>
 
 @property(retain, nonatomic) UIAlertView* alertView;
+- (void) show;
 
 - (void) setHandlerForButtonAtIndex:(NSInteger) i withBlock:(void(^)()) block;
 

@@ -12,5 +12,6 @@
 @interface ILActivity ()
 
 @property(assign, nonatomic) ILActivitiesSet* activitiesSet;
+- (void) performActivity;
 
 @end

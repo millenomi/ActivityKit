@@ -49,7 +49,7 @@
 - (void) setHandlerForButtonAtIndex:(NSInteger) i withBlock:(void(^)()) block;
 {
     NSNumber* key = [NSNumber numberWithInteger:i];
-    [handlerBlocks setObject:[block copy] forKey:key];
+    [handlerBlocks setObject:[[block copy] autorelease] forKey:key];
 }
 
 - (NSInteger) addButtonWithTitle:(NSString*) title block:(void(^)()) block;
@@ -66,6 +66,14 @@
     
     if (block)
         block();
+    
+    [self autorelease];
+}
+
+- (void) show;
+{
+    [self retain];
+    [self.alertView show];
 }
 
 @end

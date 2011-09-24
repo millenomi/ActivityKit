@@ -140,6 +140,8 @@ NSString* const kILActivitiesSetActivityKey = @"ILActivitiesSetActivityKey";
         
         NSDictionary* userInfo = [NSDictionary dictionaryWithObject:activity forKey:kILActivitiesSetActivityKey];
         [[NSNotificationCenter defaultCenter] postNotificationName:kILActivitiesSetDidAddActivity object:self userInfo:userInfo];
+        
+        [activity performActivity];
     }
     
 }
@@ -188,6 +190,21 @@ NSString* const kILActivitiesSetActivityKey = @"ILActivitiesSetActivityKey";
 - (id <ILActivitiesQuery>) queryForActivitiesMatchingBlock:(BOOL(^)(ILActivity*)) block;
 {
     return [[[ILActivitiesMatchingBlockQuery alloc] initWithMatchingBlock:block set:self] autorelease];
+}
+
+@end
+
+
+@implementation ILActivity (ILSharedActivitiesSetQueries)
+
++ (id)startedActivity;
+{
+    return [[self startedActivities] anyObject];
+}
+
++ (NSSet *)startedActivities;
+{
+    return [[ILActivitiesSet sharedSet] queryForActivitiesOfClass:self].activities;
 }
 
 @end

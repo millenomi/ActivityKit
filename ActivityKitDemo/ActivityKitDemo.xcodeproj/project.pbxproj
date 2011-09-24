@@ -1,0 +1,303 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		153BE5A5142E248500F475D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A4142E248500F475D8 /* UIKit.framework */; };
+		153BE5A7142E248500F475D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A6142E248500F475D8 /* Foundation.framework */; };
+		153BE5A9142E248500F475D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A8142E248500F475D8 /* CoreGraphics.framework */; };
+		153BE5AF142E248500F475D8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 153BE5AD142E248500F475D8 /* InfoPlist.strings */; };
+		153BE5B1142E248500F475D8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE5B0142E248500F475D8 /* main.m */; };
+		153BE5B5142E248500F475D8 /* ILAKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE5B4142E248500F475D8 /* ILAKAppDelegate.m */; };
+		153BE5B8142E248500F475D8 /* ILAKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE5B7142E248500F475D8 /* ILAKViewController.m */; };
+		153BE5BB142E248500F475D8 /* ILAKViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153BE5B9142E248500F475D8 /* ILAKViewController.xib */; };
+		153BE5C3142E2A4100F475D8 /* ILAKLoginActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE5C2142E2A4100F475D8 /* ILAKLoginActivity.m */; };
+		153BE5C5142E32E500F475D8 /* libActivity.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5C4142E32E500F475D8 /* libActivity.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		153BE5A0142E248400F475D8 /* ActivityKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		153BE5A4142E248500F475D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		153BE5A6142E248500F475D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		153BE5A8142E248500F475D8 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		153BE5AC142E248500F475D8 /* ActivityKitDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ActivityKitDemo-Info.plist"; sourceTree = "<group>"; };
+		153BE5AE142E248500F475D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		153BE5B0142E248500F475D8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		153BE5B2142E248500F475D8 /* ActivityKitDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ActivityKitDemo-Prefix.pch"; sourceTree = "<group>"; };
+		153BE5B3142E248500F475D8 /* ILAKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ILAKAppDelegate.h; sourceTree = "<group>"; };
+		153BE5B4142E248500F475D8 /* ILAKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ILAKAppDelegate.m; sourceTree = "<group>"; };
+		153BE5B6142E248500F475D8 /* ILAKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ILAKViewController.h; sourceTree = "<group>"; };
+		153BE5B7142E248500F475D8 /* ILAKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ILAKViewController.m; sourceTree = "<group>"; };
+		153BE5BA142E248500F475D8 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ILAKViewController.xib; sourceTree = "<group>"; };
+		153BE5C1142E2A4100F475D8 /* ILAKLoginActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILAKLoginActivity.h; sourceTree = "<group>"; };
+		153BE5C2142E2A4100F475D8 /* ILAKLoginActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAKLoginActivity.m; sourceTree = "<group>"; };
+		153BE5C4142E32E500F475D8 /* libActivity.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libActivity.a; path = "../../../Library/Developer/Xcode/DerivedData/ActivityKit-ahhablflbvxvaeaiiclvwhozgzxz/Build/Products/Debug-iphoneos/libActivity.a"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		153BE59D142E248400F475D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153BE5C5142E32E500F475D8 /* libActivity.a in Frameworks */,
+				153BE5A5142E248500F475D8 /* UIKit.framework in Frameworks */,
+				153BE5A7142E248500F475D8 /* Foundation.framework in Frameworks */,
+				153BE5A9142E248500F475D8 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		153BE595142E248400F475D8 = {
+			isa = PBXGroup;
+			children = (
+				153BE5AA142E248500F475D8 /* ActivityKitDemo */,
+				153BE5A3142E248500F475D8 /* Frameworks */,
+				153BE5A1142E248400F475D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		153BE5A1142E248400F475D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				153BE5A0142E248400F475D8 /* ActivityKitDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		153BE5A3142E248500F475D8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				153BE5C4142E32E500F475D8 /* libActivity.a */,
+				153BE5A4142E248500F475D8 /* UIKit.framework */,
+				153BE5A6142E248500F475D8 /* Foundation.framework */,
+				153BE5A8142E248500F475D8 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		153BE5AA142E248500F475D8 /* ActivityKitDemo */ = {
+			isa = PBXGroup;
+			children = (
+				153BE5B3142E248500F475D8 /* ILAKAppDelegate.h */,
+				153BE5B4142E248500F475D8 /* ILAKAppDelegate.m */,
+				153BE5B6142E248500F475D8 /* ILAKViewController.h */,
+				153BE5B7142E248500F475D8 /* ILAKViewController.m */,
+				153BE5B9142E248500F475D8 /* ILAKViewController.xib */,
+				153BE5C1142E2A4100F475D8 /* ILAKLoginActivity.h */,
+				153BE5C2142E2A4100F475D8 /* ILAKLoginActivity.m */,
+				153BE5AB142E248500F475D8 /* Supporting Files */,
+			);
+			path = ActivityKitDemo;
+			sourceTree = "<group>";
+		};
+		153BE5AB142E248500F475D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				153BE5AC142E248500F475D8 /* ActivityKitDemo-Info.plist */,
+				153BE5AD142E248500F475D8 /* InfoPlist.strings */,
+				153BE5B0142E248500F475D8 /* main.m */,
+				153BE5B2142E248500F475D8 /* ActivityKitDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		153BE59F142E248400F475D8 /* ActivityKitDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 153BE5BE142E248500F475D8 /* Build configuration list for PBXNativeTarget "ActivityKitDemo" */;
+			buildPhases = (
+				153BE59C142E248400F475D8 /* Sources */,
+				153BE59D142E248400F475D8 /* Frameworks */,
+				153BE59E142E248400F475D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActivityKitDemo;
+			productName = ActivityKitDemo;
+			productReference = 153BE5A0142E248400F475D8 /* ActivityKitDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		153BE597142E248400F475D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 153BE59A142E248400F475D8 /* Build configuration list for PBXProject "ActivityKitDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 153BE595142E248400F475D8;
+			productRefGroup = 153BE5A1142E248400F475D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				153BE59F142E248400F475D8 /* ActivityKitDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		153BE59E142E248400F475D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153BE5AF142E248500F475D8 /* InfoPlist.strings in Resources */,
+				153BE5BB142E248500F475D8 /* ILAKViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		153BE59C142E248400F475D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				153BE5B1142E248500F475D8 /* main.m in Sources */,
+				153BE5B5142E248500F475D8 /* ILAKAppDelegate.m in Sources */,
+				153BE5B8142E248500F475D8 /* ILAKViewController.m in Sources */,
+				153BE5C3142E2A4100F475D8 /* ILAKLoginActivity.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		153BE5AD142E248500F475D8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				153BE5AE142E248500F475D8 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		153BE5B9142E248500F475D8 /* ILAKViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				153BE5BA142E248500F475D8 /* en */,
+			);
+			name = ILAKViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		153BE5BC142E248500F475D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$SRCROOT\"/..";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		153BE5BD142E248500F475D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "\"$SRCROOT\"/..";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		153BE5BF142E248500F475D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActivityKitDemo/ActivityKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "ActivityKitDemo/ActivityKitDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ActivityKit-ahhablflbvxvaeaiiclvwhozgzxz/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		153BE5C0142E248500F475D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ActivityKitDemo/ActivityKitDemo-Prefix.pch";
+				INFOPLIST_FILE = "ActivityKitDemo/ActivityKitDemo-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Library/Developer/Xcode/DerivedData/ActivityKit-ahhablflbvxvaeaiiclvwhozgzxz/Build/Products/Debug-iphoneos\"",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		153BE59A142E248400F475D8 /* Build configuration list for PBXProject "ActivityKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				153BE5BC142E248500F475D8 /* Debug */,
+				153BE5BD142E248500F475D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		153BE5BE142E248500F475D8 /* Build configuration list for PBXNativeTarget "ActivityKitDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				153BE5BF142E248500F475D8 /* Debug */,
+				153BE5C0142E248500F475D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 153BE597142E248400F475D8 /* Project object */;
+}

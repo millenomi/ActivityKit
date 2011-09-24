@@ -29,3 +29,11 @@
 - (id <ILActivitiesQuery>) queryForActivitiesMatchingBlock:(BOOL(^)(ILActivity*)) block;
 
 @end
+
+/* These methods work in tandem with the shared activities set to make it easier to perform certain queries. */
+@interface ILActivity (ILSharedActivitiesSetQueries)
+
++ (NSSet*) startedActivities;
++ (id) startedActivity; // if more than one, an arbitrary one is provided
+
+@end

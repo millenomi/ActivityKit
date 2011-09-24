@@ -14,9 +14,9 @@
 		153BE587142CD05A00F475D8 /* ILActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE585142CD05A00F475D8 /* ILActivity.m */; };
 		153BE589142CE38300F475D8 /* ILActivity+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 153BE588142CE38300F475D8 /* ILActivity+Private.h */; };
 		153BE58C142E209F00F475D8 /* ILAlertViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 153BE58A142E209F00F475D8 /* ILAlertViewController.h */; };
-		153BE58D142E209F00F475D8 /* ILAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE58B142E209F00F475D8 /* ILAlertViewController.m */; };
 		153BE590142E223600F475D8 /* ILActionSheetController.h in Headers */ = {isa = PBXBuildFile; fileRef = 153BE58E142E223500F475D8 /* ILActionSheetController.h */; };
 		153BE591142E223600F475D8 /* ILActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE58F142E223500F475D8 /* ILActionSheetController.m */; };
+		153BE5CA142E375100F475D8 /* ILAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE58B142E209F00F475D8 /* ILAlertViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -163,8 +163,8 @@
 			files = (
 				153BE583142CD05300F475D8 /* ILActivitiesSet.m in Sources */,
 				153BE587142CD05A00F475D8 /* ILActivity.m in Sources */,
-				153BE58D142E209F00F475D8 /* ILAlertViewController.m in Sources */,
 				153BE591142E223600F475D8 /* ILActionSheetController.m in Sources */,
+				153BE5CA142E375100F475D8 /* ILAlertViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +254,7 @@
 				153BE57F142CD04100F475D8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -23,7 +23,7 @@
 @property(readonly, nonatomic, getter = isFinished) BOOL finished;
 
 // --- Methods to override in subclasses ----------
-- (void) performActivity; // must start doing the activity, then call -end sometime in the future (not necessarily as it's called) to end it.
+- (void) main; // must start doing the activity, then call -end sometime in the future (not necessarily as it's called) to end it.
 
 @property(readonly, nonatomic, getter = isPerformedWhileInBackground) BOOL performedWhileInBackground;
 // if YES, marks the application as busy to the OS while the activity is performed.

@@ -49,6 +49,26 @@
 
 - (void)start;
 {
+    [[ILActivitiesSet sharedSet] addActivity:self]; // this calls -performActivity later.
+}
+
+- (void)setActivitiesSet:(ILActivitiesSet *) a;
+{
+    if (activitiesSet != a) {
+        if (activitiesSet)
+            self.started = YES;
+        
+        activitiesSet = a;
+    }
+}
+
+- (void)cancel;
+{
+    [self end];
+}
+
+- (void)performActivity;
+{
     if (self.performedWhileInBackground) {
         runningBackgrounded = YES;
         
@@ -71,28 +91,12 @@
         
     }
 
-    [[ILActivitiesSet sharedSet] addActivity:self]; // this calls -performActivity later.
-    
+    [self main];
 }
 
-- (void)setActivitiesSet:(ILActivitiesSet *) a;
+- (void)main;
 {
-    if (activitiesSet != a) {
-        if (activitiesSet)
-            self.started = YES;
-        
-        activitiesSet = a;
-    }
-}
-
-- (void)cancel;
-{
-    [self end];
-}
-
-- (void)performActivity;
-{
-    // does nothing by default.
+    // Does nothing by default
 }
 
 - (void)end;
