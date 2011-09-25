@@ -12,7 +12,17 @@
 #import "Activity/ILActivity.h"
 #import "Activity/ILActivitiesSet.h"
 
+@interface ILAKViewController ()
+@property(retain, nonatomic) id <ILActivitiesQuery> loginActivityQuery;
+@end
+
+
 @implementation ILAKViewController
+
+@synthesize loginActivityQuery;
+
+@synthesize loginButton;
+@synthesize loginSpinner;
 
 - (void)didReceiveMemoryWarning
 {
@@ -25,11 +35,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    self.loginActivityQuery = [[ILActivitiesSet sharedSet] queryForActivitiesOfClass:[ILAKLoginActivity class]];
 }
 
 - (void)viewDidUnload
 {
+    [self setLoginButton:nil];
+    [self setLoginSpinner:nil];
+    
+    self.loginActivityQuery = nil;
+    
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -38,6 +53,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    [self addObserver:self forKeyPath:@"loginActivityQuery.activities" options:NSKeyValueObservingOptionInitial context:NULL];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -53,6 +69,7 @@
 - (void)viewDidDisappear:(BOOL)animated
 {
 	[super viewDidDisappear:animated];
+    [self removeObserver:self forKeyPath:@"loginActivityQuery.activities"];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -65,6 +82,18 @@
 {
     if (![ILAKLoginActivity startedActivity])
         [[ILAKLoginActivity new] start];
+}
+
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context;
+{
+    BOOL isLoggingIn = self.loginActivityQuery.activities.count > 0;
+    
+    if (isLoggingIn)
+        [self.loginSpinner startAnimating];
+    else
+        [self.loginSpinner stopAnimating];
+    
+    self.loginButton.enabled = !isLoggingIn;
 }
 
 @end

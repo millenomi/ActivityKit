@@ -11,5 +11,7 @@
 @interface ILAKViewController : UIViewController
 
 - (IBAction)logIn:(id)sender;
+@property (strong, nonatomic) IBOutlet UIButton *loginButton;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loginSpinner;
 
 @end

@@ -50,7 +50,7 @@
             [self showTwoFieldsLoginAlert];
     }];
     
-    [retryAlert show];
+    [retryAlert performSelector:@selector(show) withObject:nil afterDelay:2.5];
 }
 
 - (void) showTwoFieldsLoginAlert;
