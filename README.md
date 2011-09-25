@@ -7,7 +7,7 @@ For an example, see how an activity can be written to simulate the multi-alert l
 To create a new activity, subclass the `ILActivity` class and override its 
 `-main` method to start the job you want the activity to do. Activity code invoked by this kit always executes on the main thread. Your subclass's code must invoke its own `-end` method when the activity finishes — either within `-main` or later, asynchronously.
 
-To run an activity, create a new `ILActivitiesSet` and add it to the set. An activity starts as soon as it's added. You can also use the `-start` method on the activity itself — this will add the activity to the shared `ILActivitiesSet` instance. You can query the `ILActivitiesSet` for all running activities and even produce live queries you can monitor with KVO.
+To run an activity, create a new `ILActivitiesSet` and add it to the set. An activity starts as soon as it's added. You can also use the `-start` method on the activity itself — this will add the activity to the shared `ILActivitiesSet` instance. You can access the `ILActivitiesSet`'s properties to retrieve all running activities and even produce live queries you can monitor with KVO.
 
 ## Activities vs. `NSOperation`s
 
