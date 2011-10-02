@@ -17,6 +17,8 @@
 		153BE590142E223600F475D8 /* ILActionSheetController.h in Headers */ = {isa = PBXBuildFile; fileRef = 153BE58E142E223500F475D8 /* ILActionSheetController.h */; };
 		153BE591142E223600F475D8 /* ILActionSheetController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE58F142E223500F475D8 /* ILActionSheetController.m */; };
 		153BE5CA142E375100F475D8 /* ILAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE58B142E209F00F475D8 /* ILAlertViewController.m */; };
+		158D70DD14388814004FA6B3 /* ILChoreography.h in Headers */ = {isa = PBXBuildFile; fileRef = 158D70DB14388814004FA6B3 /* ILChoreography.h */; };
+		158D70DE14388814004FA6B3 /* ILChoreography.m in Sources */ = {isa = PBXBuildFile; fileRef = 158D70DC14388814004FA6B3 /* ILChoreography.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		153BE58B142E209F00F475D8 /* ILAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILAlertViewController.m; sourceTree = "<group>"; };
 		153BE58E142E223500F475D8 /* ILActionSheetController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILActionSheetController.h; sourceTree = "<group>"; };
 		153BE58F142E223500F475D8 /* ILActionSheetController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILActionSheetController.m; sourceTree = "<group>"; };
+		158D70DB14388814004FA6B3 /* ILChoreography.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILChoreography.h; sourceTree = "<group>"; };
+		158D70DC14388814004FA6B3 /* ILChoreography.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILChoreography.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +84,8 @@
 				153BE584142CD05A00F475D8 /* ILActivity.h */,
 				153BE588142CE38300F475D8 /* ILActivity+Private.h */,
 				153BE585142CD05A00F475D8 /* ILActivity.m */,
+				158D70DB14388814004FA6B3 /* ILChoreography.h */,
+				158D70DC14388814004FA6B3 /* ILChoreography.m */,
 				153BE58A142E209F00F475D8 /* ILAlertViewController.h */,
 				153BE58B142E209F00F475D8 /* ILAlertViewController.m */,
 				153BE58E142E223500F475D8 /* ILActionSheetController.h */,
@@ -108,6 +114,7 @@
 				153BE589142CE38300F475D8 /* ILActivity+Private.h in Headers */,
 				153BE58C142E209F00F475D8 /* ILAlertViewController.h in Headers */,
 				153BE590142E223600F475D8 /* ILActionSheetController.h in Headers */,
+				158D70DD14388814004FA6B3 /* ILChoreography.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -165,6 +172,7 @@
 				153BE587142CD05A00F475D8 /* ILActivity.m in Sources */,
 				153BE591142E223600F475D8 /* ILActionSheetController.m in Sources */,
 				153BE5CA142E375100F475D8 /* ILAlertViewController.m in Sources */,
+				158D70DE14388814004FA6B3 /* ILChoreography.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
