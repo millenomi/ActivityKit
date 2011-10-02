@@ -8,12 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class ILAKViewController;
-
 @interface ILAKAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (strong, nonatomic) ILAKViewController *viewController;
+@property (strong, nonatomic) UIViewController *viewController;
 
 @end

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150A002F1438F4D0001E538B /* libStructure.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 150A002E1438F4D0001E538B /* libStructure.a */; };
+		150A00361438F971001E538B /* LeftShadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 150A00351438F971001E538B /* LeftShadow.png */; };
 		153BE5A5142E248500F475D8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A4142E248500F475D8 /* UIKit.framework */; };
 		153BE5A7142E248500F475D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A6142E248500F475D8 /* Foundation.framework */; };
 		153BE5A9142E248500F475D8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE5A8142E248500F475D8 /* CoreGraphics.framework */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150A002E1438F4D0001E538B /* libStructure.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libStructure.a; path = "../Structure/build/Release-iphoneos/libStructure.a"; sourceTree = "<group>"; };
+		150A00351438F971001E538B /* LeftShadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LeftShadow.png; sourceTree = "<group>"; };
 		153BE5A0142E248400F475D8 /* ActivityKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActivityKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		153BE5A4142E248500F475D8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		153BE5A6142E248500F475D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150A002F1438F4D0001E538B /* libStructure.a in Frameworks */,
 				153BE5C5142E32E500F475D8 /* libActivity.a in Frameworks */,
 				153BE5A5142E248500F475D8 /* UIKit.framework in Frameworks */,
 				153BE5A7142E248500F475D8 /* Foundation.framework in Frameworks */,
@@ -73,6 +78,7 @@
 		153BE5A3142E248500F475D8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				150A002E1438F4D0001E538B /* libStructure.a */,
 				153BE5C4142E32E500F475D8 /* libActivity.a */,
 				153BE5A4142E248500F475D8 /* UIKit.framework */,
 				153BE5A6142E248500F475D8 /* Foundation.framework */,
@@ -91,6 +97,7 @@
 				153BE5B9142E248500F475D8 /* ILAKViewController.xib */,
 				153BE5C1142E2A4100F475D8 /* ILAKLoginActivity.h */,
 				153BE5C2142E2A4100F475D8 /* ILAKLoginActivity.m */,
+				150A00351438F971001E538B /* LeftShadow.png */,
 				153BE5AB142E248500F475D8 /* Supporting Files */,
 			);
 			path = ActivityKitDemo;
@@ -159,6 +166,7 @@
 			files = (
 				153BE5AF142E248500F475D8 /* InfoPlist.strings in Resources */,
 				153BE5BB142E248500F475D8 /* ILAKViewController.xib in Resources */,
+				150A00361438F971001E538B /* LeftShadow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,7 +225,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$SRCROOT\"/..";
+				HEADER_SEARCH_PATHS = (
+					"\"$SRCROOT\"/../Structure",
+					"\"$SRCROOT\"/..",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 			};
@@ -235,7 +246,10 @@
 				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "\"$SRCROOT\"/..";
+				HEADER_SEARCH_PATHS = (
+					"\"$SRCROOT\"/../Structure",
+					"\"$SRCROOT\"/..",
+				);
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;

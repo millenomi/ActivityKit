@@ -240,7 +240,7 @@
             
             [self addChildViewController:newController];
             
-            drawerController.view.frame = self.drawerArea;
+            newController.view.frame = self.drawerArea;
             [self.view insertSubview:newController.view belowSubview:self.mainController.view];
             
             self.accentView.frame = self.accentAreaBeforeAnimation;
@@ -288,7 +288,7 @@
             [self setDrawerControllerPrimitive:newController];
 
             [self addChildViewController:newController];
-            drawerController.view.frame = self.drawerArea;
+            newController.view.frame = self.drawerArea;
             [self.view insertSubview:newController.view belowSubview:pastController.view];
             
             animating = YES;

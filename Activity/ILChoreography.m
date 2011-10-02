@@ -48,6 +48,8 @@
 
 - (void)main;
 {
+    [self invokePreparationBlocks];
+    
     [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
         [self invokeAnimationBlocks];
     } completion:^(BOOL finished) {

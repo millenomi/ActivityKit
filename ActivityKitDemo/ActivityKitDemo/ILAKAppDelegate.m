@@ -9,6 +9,7 @@
 #import "ILAKAppDelegate.h"
 
 #import "ILAKViewController.h"
+#import "Structure/ILSlidingRevealViewController.h"
 
 @implementation ILAKAppDelegate
 
@@ -19,7 +20,14 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.viewController = [[ILAKViewController alloc] initWithNibName:@"ILAKViewController" bundle:nil];
+    
+    UIViewController* vc = [[ILAKViewController alloc] initWithNibName:@"ILAKViewController" bundle:nil];
+    
+    ILSlidingRevealViewController* slider = [ILSlidingRevealViewController new];
+    slider.mainController = vc;
+    
+    self.viewController = slider;
+    
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;

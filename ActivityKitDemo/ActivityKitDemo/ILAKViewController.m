@@ -12,6 +12,9 @@
 #import "Activity/ILActivity.h"
 #import "Activity/ILActivitiesSet.h"
 
+#import "Activity/UIViewController+ILFindingContainer.h"
+#import "Structure/ILSlidingRevealViewController.h"
+
 @interface ILAKViewController ()
 @property(retain, nonatomic) id <ILActivitiesQuery> loginActivityQuery;
 @end
@@ -94,6 +97,31 @@
         [self.loginSpinner stopAnimating];
     
     self.loginButton.enabled = !isLoggingIn;
+}
+
+- (IBAction)showDrawer:(id)sender;
+{
+    ILSlidingRevealViewController* parent = [self containingViewControllerOfClass:[ILSlidingRevealViewController class]];
+    
+    UIViewController* red = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    
+    UIView* redView = [[UIView alloc] initWithFrame:CGRectZero];
+    redView.backgroundColor = [UIColor redColor];
+    red.view = redView;
+    
+    red.navigationItem.rightBarButtonItem =
+        [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(hideDrawer)];
+    
+    UINavigationController* nav = [[UINavigationController alloc] initWithRootViewController:red];
+    
+    [parent setDrawerController:nav animated:YES];
+}
+
+- (void) hideDrawer;
+{
+    ILSlidingRevealViewController* parent = [self containingViewControllerOfClass:[ILSlidingRevealViewController class]];
+    
+    [parent setDrawerController:nil animated:YES];
 }
 
 @end

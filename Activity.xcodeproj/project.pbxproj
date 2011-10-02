@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150A002C1438F375001E538B /* UIViewController+ILFindingContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 150A002A1438F375001E538B /* UIViewController+ILFindingContainer.h */; };
+		150A002D1438F375001E538B /* UIViewController+ILFindingContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 150A002B1438F375001E538B /* UIViewController+ILFindingContainer.m */; };
 		153BE574142CD04100F475D8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 153BE573142CD04100F475D8 /* Foundation.framework */; };
 		153BE582142CD05300F475D8 /* ILActivitiesSet.h in Headers */ = {isa = PBXBuildFile; fileRef = 153BE580142CD05300F475D8 /* ILActivitiesSet.h */; };
 		153BE583142CD05300F475D8 /* ILActivitiesSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 153BE581142CD05300F475D8 /* ILActivitiesSet.m */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150A002A1438F375001E538B /* UIViewController+ILFindingContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ILFindingContainer.h"; sourceTree = "<group>"; };
+		150A002B1438F375001E538B /* UIViewController+ILFindingContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ILFindingContainer.m"; sourceTree = "<group>"; };
 		153BE570142CD04100F475D8 /* libActivity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libActivity.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		153BE573142CD04100F475D8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		153BE577142CD04100F475D8 /* Activity-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Activity-Prefix.pch"; sourceTree = "<group>"; };
@@ -50,6 +54,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		150A00281438F35A001E538B /* Assorted Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				153BE58A142E209F00F475D8 /* ILAlertViewController.h */,
+				153BE58B142E209F00F475D8 /* ILAlertViewController.m */,
+				153BE58E142E223500F475D8 /* ILActionSheetController.h */,
+				153BE58F142E223500F475D8 /* ILActionSheetController.m */,
+				150A002A1438F375001E538B /* UIViewController+ILFindingContainer.h */,
+				150A002B1438F375001E538B /* UIViewController+ILFindingContainer.m */,
+			);
+			name = "Assorted Utilities";
+			sourceTree = "<group>";
+		};
 		153BE565142CD04100F475D8 = {
 			isa = PBXGroup;
 			children = (
@@ -86,10 +103,7 @@
 				153BE585142CD05A00F475D8 /* ILActivity.m */,
 				158D70DB14388814004FA6B3 /* ILChoreography.h */,
 				158D70DC14388814004FA6B3 /* ILChoreography.m */,
-				153BE58A142E209F00F475D8 /* ILAlertViewController.h */,
-				153BE58B142E209F00F475D8 /* ILAlertViewController.m */,
-				153BE58E142E223500F475D8 /* ILActionSheetController.h */,
-				153BE58F142E223500F475D8 /* ILActionSheetController.m */,
+				150A00281438F35A001E538B /* Assorted Utilities */,
 			);
 			path = Activity;
 			sourceTree = "<group>";
@@ -115,6 +129,7 @@
 				153BE58C142E209F00F475D8 /* ILAlertViewController.h in Headers */,
 				153BE590142E223600F475D8 /* ILActionSheetController.h in Headers */,
 				158D70DD14388814004FA6B3 /* ILChoreography.h in Headers */,
+				150A002C1438F375001E538B /* UIViewController+ILFindingContainer.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +188,7 @@
 				153BE591142E223600F475D8 /* ILActionSheetController.m in Sources */,
 				153BE5CA142E375100F475D8 /* ILAlertViewController.m in Sources */,
 				158D70DE14388814004FA6B3 /* ILChoreography.m in Sources */,
+				150A002D1438F375001E538B /* UIViewController+ILFindingContainer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
