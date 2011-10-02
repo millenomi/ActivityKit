@@ -16,7 +16,7 @@
 @property(retain, nonatomic) UIViewController* drawerController;
 
 - (void)setDrawerController:(UIViewController *)dc animated:(BOOL) ani;
-- (ILChoreography*) choreographyForSettingDrawerController:(UIViewController*) vc;
+- (ILChoreography*) choreographyForChangingDrawerController:(UIViewController*) vc;
 
 @end
 

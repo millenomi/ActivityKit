@@ -225,7 +225,7 @@
     return r;
 }
 
-- (ILChoreography*) choreographyForSettingDrawerController:(UIViewController*) newController;
+- (ILChoreography*) choreographyForChangingDrawerController:(UIViewController*) newController;
 {
     UIViewController* pastController = [[self.drawerController retain] autorelease];
     ILChoreography* choreography = [[ILChoreography new] autorelease];
@@ -320,7 +320,7 @@
     }
     
     if (dc != drawerController) {
-        [[self choreographyForSettingDrawerController:dc] start];
+        [[self choreographyForChangingDrawerController:dc] start];
     }
 }
 
