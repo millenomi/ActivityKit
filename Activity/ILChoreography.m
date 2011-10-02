@@ -11,16 +11,16 @@
 #if TARGET_OS_IPHONE
 
 @implementation ILChoreography {
-    NSMutableSet* animationBlocks, * completionBlocks, * preparationBlocks;
+    NSMutableArray* animationBlocks, * completionBlocks, * preparationBlocks;
 }
 
 - (id)init;
 {
     self = [super init];
     if (self) {
-        animationBlocks = [NSMutableSet new];
-        completionBlocks = [NSMutableSet new];
-        preparationBlocks = [NSMutableSet new];
+        animationBlocks = [NSMutableArray new];
+        completionBlocks = [NSMutableArray new];
+        preparationBlocks = [NSMutableArray new];
     }
     
     return self;
@@ -36,17 +36,17 @@
 
 - (void) addAnimationWithBlocksForPreparing:(void(^)()) preparation animating:(void(^)()) animations completing:(void(^)(BOOL)) completion;
 {
-    [animationBlocks addObject:[[animations copy] autorelease]];
-    [completionBlocks addObject:[[completion copy] autorelease]];
-    [preparationBlocks addObject:[[preparation copy] autorelease]];
+    if (animations)
+        [animationBlocks addObject:[[animations copy] autorelease]];
+    
+    if (completion)
+        [completionBlocks addObject:[[completion copy] autorelease]];
+    
+    if (preparation)
+        [preparationBlocks addObject:[[preparation copy] autorelease]];
 }
 
 - (void)main;
-{
-    [self startAnimating];
-}
-
-- (void)startAnimating;
 {
     [UIView animateWithDuration:0.25 delay:0.0 options:UIViewAnimationCurveEaseInOut animations:^{
         [self invokeAnimationBlocks];
@@ -87,3 +87,4 @@
 @end
 
 #endif
+
