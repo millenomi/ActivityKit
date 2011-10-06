@@ -45,7 +45,7 @@
 // - (BOOL) sideViewControllerDimsMainWhenDrawerVisible:(ILSideViewController*) svc;
 
 // If YES, the drawer controller will be dismissable by user gesture (tapping on a dimmed main view controller, swiping left-to-right etc).
-// - (BOOL) sideViewControllerCanDismissDrawerByUserGesture:(ILSideViewController*) svc;
+- (BOOL) sideViewControllerCanDismissDrawerByUserGesture:(ILSideViewController*) svc;
 
 // If the user can dismiss the drawer controller, these methods are called when the dismissal occurs (or is attempted).
 // userWill... is called first; userDid... is paired. If 'dismissed' is NO, then the drawer wasn't dismissed for some reason (eg user did not complete the gesture).

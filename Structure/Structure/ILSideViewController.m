@@ -45,7 +45,7 @@
     BOOL animating;
     BOOL mainControllerTakesDelegateMethods;
     
-    UISwipeGestureRecognizer* showDrawerRecognizer;
+    UISwipeGestureRecognizer* showDrawerRecognizer, * hideDrawerRecognizer;
 }
 
 @synthesize delegate;
@@ -76,6 +76,9 @@
     // Remove all targets and actions
     [showDrawerRecognizer removeTarget:nil action:NULL];
     [showDrawerRecognizer release];
+    [hideDrawerRecognizer removeTarget:nil action:NULL];
+    [hideDrawerRecognizer release];
+
     
     [super dealloc];
 }
@@ -89,6 +92,10 @@
     showDrawerRecognizer.numberOfTouchesRequired = 1;
     showDrawerRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
     
+    hideDrawerRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(shouldHideDrawerWithUserGesture:)];
+    hideDrawerRecognizer.numberOfTouchesRequired = 1;
+    hideDrawerRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    
     [self addSubviewsWithoutAnimation];
 }
 
@@ -97,6 +104,10 @@
     [showDrawerRecognizer removeTarget:nil action:NULL];
     [showDrawerRecognizer release];
     showDrawerRecognizer = nil;
+    
+    [hideDrawerRecognizer removeTarget:nil action:NULL];
+    [hideDrawerRecognizer release];
+    hideDrawerRecognizer = nil;
     
     [super viewDidUnload];
 }
@@ -111,11 +122,22 @@
     }
 }
 
+- (void) shouldHideDrawerWithUserGesture:(id) recog;
+{
+    if (self.drawerController) {
+        BOOL shouldDismiss = [self.delegate respondsToSelector:@selector(sideViewControllerCanDismissDrawerByUserGesture:)] && [self.delegate sideViewControllerCanDismissDrawerByUserGesture:self];
+        
+        if (shouldDismiss)
+            [self setDrawerController:nil animated:YES];
+    }
+}
+
 - (void) addSubviewsWithoutAnimation;
 {
     if (self.mainController) {
         [self.view addSubview:self.mainController.view];
         [self.mainController.view addGestureRecognizer:showDrawerRecognizer];
+        [self.mainController.view addGestureRecognizer:hideDrawerRecognizer];
     }
     
     if (self.drawerController) {

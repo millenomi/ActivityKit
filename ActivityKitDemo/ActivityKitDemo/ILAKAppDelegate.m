@@ -48,6 +48,11 @@
     return vc;
 }
 
+- (BOOL)sideViewControllerCanDismissDrawerByUserGesture:(ILSideViewController *)svc;
+{
+    return YES;
+}
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     /*
