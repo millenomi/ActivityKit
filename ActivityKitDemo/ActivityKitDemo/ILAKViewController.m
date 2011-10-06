@@ -13,7 +13,7 @@
 #import "Activity/ILActivitiesSet.h"
 
 #import "Activity/UIViewController+ILFindingContainer.h"
-#import "Structure/ILSlidingRevealViewController.h"
+#import "Structure/ILSideViewController.h"
 
 @interface ILAKViewController ()
 @property(retain, nonatomic) id <ILActivitiesQuery> loginActivityQuery;
@@ -101,7 +101,7 @@
 
 - (IBAction)showDrawer:(id)sender;
 {
-    ILSlidingRevealViewController* parent = [self containingViewControllerOfClass:[ILSlidingRevealViewController class]];
+    ILSideViewController* parent = [self containingViewControllerOfClass:[ILSideViewController class]];
     
     UIViewController* red = [[UIViewController alloc] initWithNibName:nil bundle:nil];
     
@@ -119,7 +119,7 @@
 
 - (void) hideDrawer;
 {
-    ILSlidingRevealViewController* parent = [self containingViewControllerOfClass:[ILSlidingRevealViewController class]];
+    ILSideViewController* parent = [self containingViewControllerOfClass:[ILSideViewController class]];
     
     [parent setDrawerController:nil animated:YES];
 }

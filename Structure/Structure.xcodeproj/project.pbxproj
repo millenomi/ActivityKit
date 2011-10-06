@@ -8,16 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		158D70EF1438A0AB004FA6B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 158D70EE1438A0AB004FA6B3 /* Foundation.framework */; };
-		158D710C1438A19F004FA6B3 /* ILSlidingRevealViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 158D710A1438A19F004FA6B3 /* ILSlidingRevealViewController.h */; };
-		158D710D1438A19F004FA6B3 /* ILSlidingRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 158D710B1438A19F004FA6B3 /* ILSlidingRevealViewController.m */; };
+		158D710C1438A19F004FA6B3 /* ILSideViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 158D710A1438A19F004FA6B3 /* ILSideViewController.h */; };
+		158D710D1438A19F004FA6B3 /* ILSideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 158D710B1438A19F004FA6B3 /* ILSideViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		158D70EB1438A0AB004FA6B3 /* libStructure.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libStructure.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		158D70EE1438A0AB004FA6B3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		158D70F21438A0AB004FA6B3 /* Structure-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Structure-Prefix.pch"; sourceTree = "<group>"; };
-		158D710A1438A19F004FA6B3 /* ILSlidingRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSlidingRevealViewController.h; sourceTree = "<group>"; };
-		158D710B1438A19F004FA6B3 /* ILSlidingRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSlidingRevealViewController.m; sourceTree = "<group>"; };
+		158D710A1438A19F004FA6B3 /* ILSideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ILSideViewController.h; sourceTree = "<group>"; };
+		158D710B1438A19F004FA6B3 /* ILSideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ILSideViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,8 +60,8 @@
 		158D70F01438A0AB004FA6B3 /* Structure */ = {
 			isa = PBXGroup;
 			children = (
-				158D710A1438A19F004FA6B3 /* ILSlidingRevealViewController.h */,
-				158D710B1438A19F004FA6B3 /* ILSlidingRevealViewController.m */,
+				158D710A1438A19F004FA6B3 /* ILSideViewController.h */,
+				158D710B1438A19F004FA6B3 /* ILSideViewController.m */,
 				158D70F11438A0AB004FA6B3 /* Supporting Files */,
 			);
 			path = Structure;
@@ -82,7 +82,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158D710C1438A19F004FA6B3 /* ILSlidingRevealViewController.h in Headers */,
+				158D710C1438A19F004FA6B3 /* ILSideViewController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,7 +136,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				158D710D1438A19F004FA6B3 /* ILSlidingRevealViewController.m in Sources */,
+				158D710D1438A19F004FA6B3 /* ILSideViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

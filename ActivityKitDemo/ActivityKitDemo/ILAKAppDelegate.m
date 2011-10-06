@@ -9,7 +9,10 @@
 #import "ILAKAppDelegate.h"
 
 #import "ILAKViewController.h"
-#import "Structure/ILSlidingRevealViewController.h"
+#import "Structure/ILSideViewController.h"
+
+@interface ILAKAppDelegate () <ILSideViewControllerDelegate>
+@end
 
 @implementation ILAKAppDelegate
 
@@ -23,14 +26,26 @@
     
     UIViewController* vc = [[ILAKViewController alloc] initWithNibName:@"ILAKViewController" bundle:nil];
     
-    ILSlidingRevealViewController* slider = [ILSlidingRevealViewController new];
+    ILSideViewController* slider = [ILSideViewController new];
     slider.mainController = vc;
+    slider.delegate = self;
     
     self.viewController = slider;
     
     self.window.rootViewController = self.viewController;
     [self.window makeKeyAndVisible];
     return YES;
+}
+
+- (UIViewController *)drawerControllerForUserGestureInSideViewController:(ILSideViewController *)svc;
+{
+    UIViewController* vc = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    UIView* blueView = [[UIView alloc] initWithFrame:CGRectZero];
+    blueView.backgroundColor = [UIColor blueColor];
+    
+    vc.view = blueView;
+
+    return vc;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
