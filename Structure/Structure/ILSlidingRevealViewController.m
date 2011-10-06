@@ -124,6 +124,8 @@
             
         if ([self isViewLoaded])
             [self addSubviewsWithoutAnimation];
+        
+        [mainController didMoveToParentViewController:self];
     }
 }
 
@@ -187,6 +189,8 @@
         
         if ([self isViewLoaded])
             [self addSubviewsWithoutAnimation];
+        
+        [drawerController didMoveToParentViewController:self];
     }
 }
 
@@ -258,6 +262,8 @@
             if ([animationTime isEqualToDate:self.lastAnimationTime])
                 animating = NO;
             
+            [drawerController didMoveToParentViewController:self];
+            
         }];
     } else if (!newController && pastController) {
         [choreography addAnimationWithBlocksForPreparing:^{
@@ -265,6 +271,8 @@
             [self setDrawerControllerPrimitive:nil];
 
             animating = YES;
+            
+            [pastController willMoveToParentViewController:nil];
             
         } animating:^{
             
@@ -293,6 +301,8 @@
             
             animating = YES;
             
+            [pastController willMoveToParentViewController:nil];
+            
         } animating:^{
             
             pastController.view.alpha = 0;
@@ -305,6 +315,8 @@
             
             if ([animationTime isEqualToDate:self.lastAnimationTime])
                 animating = NO;
+            
+            [drawerController didMoveToParentViewController:self];
             
         }];
     }
