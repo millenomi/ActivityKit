@@ -63,6 +63,8 @@
     
     __weak UIAlertView* weakAlertView = alert.alertView;
     
+    alert.alertView.cancelButtonIndex = [alert addButtonWithTitle:@"Cancel" block:^{ [self cancel]; }];
+    
     [alert addButtonWithTitle:@"Log In" block:^{
         
         UIAlertView* alertView = weakAlertView;
@@ -72,8 +74,6 @@
         }
         
     }];
-    
-    alert.alertView.cancelButtonIndex = [alert addButtonWithTitle:@"Cancel" block:^{ [self cancel]; }];
     
     [alert show];
 }
@@ -89,6 +89,8 @@
     
     __weak UIAlertView* weakAlertView = alert.alertView;
     
+    alert.alertView.cancelButtonIndex = [alert addButtonWithTitle:@"Cancel" block:^{ [self cancel]; }];
+    
     [alert addButtonWithTitle:@"Log In" block:^{
         
         UIAlertView* alertView = weakAlertView;
@@ -98,8 +100,6 @@
         }
         
     }];
-    
-    alert.alertView.cancelButtonIndex = [alert addButtonWithTitle:@"Cancel" block:^{ [self cancel]; }];
     
     [alert show];
 }

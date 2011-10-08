@@ -78,7 +78,7 @@
     [showDrawerRecognizer release];
     [hideDrawerRecognizer removeTarget:nil action:NULL];
     [hideDrawerRecognizer release];
-
+    
     
     [super dealloc];
 }
@@ -114,7 +114,7 @@
 
 - (void) shouldShowDrawerWithUserGesture:(id) recog;
 {
-    if ([self.delegate respondsToSelector:@selector(drawerControllerForUserGestureInSideViewController:)]) {
+    if (!self.drawerController && [self.delegate respondsToSelector:@selector(drawerControllerForUserGestureInSideViewController:)]) {
         UIViewController* vc = [self.delegate drawerControllerForUserGestureInSideViewController:self];
         
         if (vc)
@@ -127,8 +127,20 @@
     if (self.drawerController) {
         BOOL shouldDismiss = [self.delegate respondsToSelector:@selector(sideViewControllerCanDismissDrawerByUserGesture:)] && [self.delegate sideViewControllerCanDismissDrawerByUserGesture:self];
         
-        if (shouldDismiss)
-            [self setDrawerController:nil animated:YES];
+        if (shouldDismiss) {
+            if ([self.delegate respondsToSelector:@selector(sideViewController:userWillAttemptDismissalAnimated:)])
+                [self.delegate sideViewController:self userWillAttemptDismissalAnimated:YES];
+            
+            ILChoreography* cho = [self choreographyForChangingDrawerController:nil];
+            [cho addAnimationWithBlocksForPreparing:nil animating:nil completing:^(BOOL finished) {
+                
+                if ([self.delegate respondsToSelector:@selector(sideViewController:userDidFinishDismissing:animated:)])
+                    [self.delegate sideViewController:self userDidFinishDismissing:YES animated:YES];
+                
+            }];
+            
+            [cho start];
+        }
     }
 }
 
@@ -180,7 +192,7 @@
         
         if (mainController)
             [self addChildViewController:mainController];
-            
+        
         if ([self isViewLoaded])
             [self addSubviewsWithoutAnimation];
         
@@ -312,7 +324,7 @@
             [self.view insertSubview:self.accentView belowSubview:self.mainController.view];
             
             animating = YES;
-
+            
         } animating:^{
             
             self.accentView.frame = self.accentArea;
@@ -330,7 +342,7 @@
         [choreography addAnimationWithBlocksForPreparing:^{
             
             [self setDrawerControllerPrimitive:nil];
-
+            
             animating = YES;
             
             [pastController willMoveToParentViewController:nil];
@@ -353,9 +365,9 @@
         }];
     } else if (newController && pastController) {
         [choreography addAnimationWithBlocksForPreparing:^{
-
+            
             [self setDrawerControllerPrimitive:newController];
-
+            
             [self addChildViewController:newController];
             newController.view.frame = self.drawerArea;
             [self.view insertSubview:newController.view belowSubview:pastController.view];
@@ -400,7 +412,7 @@
 - (void) setMainControllerFrame:(CGRect) frame;
 {
     self.mainController.view.frame = frame;
-
+    
     if (mainControllerTakesDelegateMethods) {
         CGRect visible = CGRectIntersection(self.view.bounds, self.mainController.view.frame);
         [(id <ILDrawerControllerPart>)self.mainController drawerController:self willChangeVisibleBounds:[self.mainController.view convertRect:visible fromView:self.view]];

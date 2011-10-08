@@ -49,7 +49,7 @@
 
 // If the user can dismiss the drawer controller, these methods are called when the dismissal occurs (or is attempted).
 // userWill... is called first; userDid... is paired. If 'dismissed' is NO, then the drawer wasn't dismissed for some reason (eg user did not complete the gesture).
-// - (void) sideViewController:(ILSideViewController*) svc userWillAttemptDismissalAnimated:(BOOL) animated;
-// - (void) sideViewController:(ILSideViewController*) svc userDidFinishDismissing:(BOOL) dismissed animated:(BOOL) animated;
+- (void) sideViewController:(ILSideViewController*) svc userWillAttemptDismissalAnimated:(BOOL) animated;
+- (void) sideViewController:(ILSideViewController*) svc userDidFinishDismissing:(BOOL) dismissed animated:(BOOL) animated;
 
 @end
